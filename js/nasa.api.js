@@ -5,15 +5,16 @@ function init() {
     var req = new XMLHttpRequest;
     req.open("GET", "https://api.nasa.gov/planetary/apod" + textBox, true);
     
-    var backgroundURL = './img/default-background.png';
-    
     req.addEventListener('load', function() {
         if (req.status >= 200 && req.status < 400) {
             var response = JSON.parse(req.responseText);
             if (response["media_type"] === "image") {
-                backgroundURL = response["url"];
+                var backgroundURL = response["url"];
   
                 $('body').css('background-image', 'url(' + backgroundURL + ')');
+            } else {
+                document.getElementById('video').src = response["url"];
+                $('#video').css('visibility', 'visible');
             }
         }
     });

@@ -4,7 +4,7 @@
   "description": "An application that lets you navigate through abundant pictures, videos and alike made by NASA using NASA Open API.",
   "main": "index.js",
   "scripts": {
-      "start": "electron ."
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/AlexanderJamesBecoy/nasa-datagazer#readme",
   "devDependencies": {
+    "ajax": "0.0.4",
     "electron": "^1.7.5"
   }
 }

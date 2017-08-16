@@ -1,13 +1,44 @@
 body {
     background-color: #000;
-    background-position: center;
-    background-size: 100% 100%;
+    background-position: right;
+    background-size: 99vw 100vh;
     background-repeat: no-repeat;
-    
 }
 
-.layer {
-    width: 100%;
+.wrapper,
+.layer{
+    width: 100vw;
     height: 100vh;
-    background: rgba(20, 20, 20, 0.55);
+}
+
+#video {
+    float: left;
+    width: 98vw;
+    height: 100vh;
+    visibility: hidden;
+    margin-left: 2vw;
+    z-index: 10;
+}
+
+.sidebar-layer {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    transition: background-color 1s;
+    z-index: 80;
+    background-color: rgba(0, 0, 0, 0);
+    visibility: hidden;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 2vw;
+    background: blue;
+    transition: width 1s;
+    position: fixed;
+    z-index: 100;
+    visibility: visible;
+}
+.sidebar:hover {
+    width: 25vw;
 }
