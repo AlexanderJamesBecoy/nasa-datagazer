@@ -1,0 +1,28 @@
+{
+  "name": "nasa-datagazer",
+  "version": "0.1.0",
+  "description": "An application that lets you navigate through abundant pictures, videos and alike made by NASA using NASA Open API.",
+  "main": "index.js",
+  "scripts": {
+      "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderJamesBecoy/nasa-datagazer.git"
+  },
+  "keywords": [
+    "nasa",
+    "nasa",
+    "open",
+    "api"
+  ],
+  "author": "Alexander James Becoy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexanderJamesBecoy/nasa-datagazer/issues"
+  },
+  "homepage": "https://github.com/AlexanderJamesBecoy/nasa-datagazer#readme",
+  "devDependencies": {
+    "electron": "^1.7.5"
+  }
+}
