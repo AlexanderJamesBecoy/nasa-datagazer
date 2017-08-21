@@ -24,6 +24,8 @@
   "homepage": "https://github.com/AlexanderJamesBecoy/nasa-datagazer#readme",
   "devDependencies": {
     "ajax": "0.0.4",
-    "electron": "^1.7.5"
+    "electron": "^1.7.5",
+    "electron-window-manager": "^1.0.4",
+    "renderer": "^0.1.5"
   }
 }

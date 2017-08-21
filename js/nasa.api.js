@@ -1,31 +1,34 @@
 var apiKey = "api_key=cyAK67LdM89ZCmcrxQ51qIdodB3et6E8fYUhW0MO";
 
 function init() {
-    var textBox = "?" + apiKey;
+    var textBox = "?hd=true&" + apiKey;
     var req = new XMLHttpRequest;
     req.open("GET", "https://api.nasa.gov/planetary/apod" + textBox, true);
-    
+
     req.addEventListener('load', function() {
         if (req.status >= 200 && req.status < 400) {
             var response = JSON.parse(req.responseText);
             if (response["media_type"] === "image") {
-                var backgroundURL = response["url"];
-  
-                $('body').css('background-image', 'url(' + backgroundURL + ')');
+                $('#video').css('display', 'none');
+                document.getElementById('image').src = response["url"];
             } else {
+
+                $('#image').css('display', 'none');
                 document.getElementById('video').src = response["url"];
-                $('#video').css('visibility', 'visible');
             }
+            document.getElementById('title').textContent = response["title"];
+            document.getElementById('explanation').textContent = response["explanation"];
+            document.getElementById('date').textContent = response["date"];
         }
     });
-    
+
     req.send(null);
 }
 
 function getData() {
     resetData();
     var textBox = "";
-    
+
     if (document.getElementById("qDate").value.length != 0) {
         console.log(document.getElementById("qDate").value);
         textBox = "?date=";
@@ -34,10 +37,10 @@ function getData() {
     } else {
         textBox = "?" + apiKey;
     }
-    
+
     var req = new XMLHttpRequest;
     req.open("GET", "https://api.nasa.gov/planetary/apod" + textBox, true);
-    
+
     req.addEventListener('load', function() {
         if (req.status >= 200 && req.status < 400) {
             var response = JSON.parse(req.responseText);
@@ -57,7 +60,7 @@ function getData() {
             document.getElementById('date').textContent = req.status;
         }
     });
-    
+
     req.send(null);
 }
 
