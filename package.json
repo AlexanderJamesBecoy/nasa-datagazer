@@ -25,7 +25,11 @@
   "devDependencies": {
     "ajax": "0.0.4",
     "electron": "^1.7.5",
+    "electron-open-link-in-browser": "^1.0.2",
     "electron-window-manager": "^1.0.4",
     "renderer": "^0.1.5"
+  },
+  "dependencies": {
+    "electron-open-link-in-browser": "^1.0.2"
   }
 }

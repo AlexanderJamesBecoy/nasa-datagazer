@@ -1,11 +1,57 @@
 body {
     background-color: #000;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
+}
+
+.wrapper-nav {
+    width: 100vw;
+    height: 6vh;
+    float: left;
+    background: #FFF;
+    background: -webkit-linear-gradient(#FFF, #EEE);
+    background: -o-linear-gradient(#FFF, #EEE);
+    background: -moz-linear-gradient(#FFF, #EEE);
+    background: linear-gradient(#FFF, #EEE);
+    border-bottom: 1px solid #BBB;
+}
+
+.wrapper-nav ul {
+    width: 100vw;
+    height: inherit;
+    padding: 0.5vh 0 0.5vh 0;
+}
+
+.wrapper-nav ul li {
+    display: inline-block;
+    list-style: none;
+    width: 7vw;
+    border-left: 1px solid #DDD;
+    padding-left: 1vw;
+}
+
+.wrapper-nav ul li a {
+    color: #666;
+    transition: font-size 0.2s;
+}
+
+.wrapper-nav ul li a:hover {
+    font-size: 1.5rem;
+    padding-top: 0;
+    color: #000;
+}
+
+.wrapper-nav ul li a:hover,
+.wrapper-nav ul li a:focus,
+.wrapper-nav ul li a:active {
+    text-decoration: none;
 }
 
 .wrapper {
     width: 100vw;
-    height: 100vh;
+    height: 94vh;
+    float: left;
 }
 
 .wrapper-left {

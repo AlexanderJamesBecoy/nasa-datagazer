@@ -1,3 +1,10 @@
+const shell = require('electron').shell;
+
+$(document).on('click', 'a[href^="http"]', function(event) {
+    event.preventDefault();
+    shell.openExternal(this.href);
+});
+
 // Functions
 function whichTransitionEvent() {
     var t,
@@ -21,7 +28,7 @@ var transitionEvent = whichTransitionEvent();
 // Sidebar
 $(document).ready(function() {
     var isHover;
-    
+
     $(".sidebar").hover(
         function(e) {
             $('.sidebar-layer').css('visibility', 'visible');
