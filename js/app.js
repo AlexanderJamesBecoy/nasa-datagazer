@@ -5,6 +5,14 @@ $(document).on('click', 'a[href^="http"]', function(event) {
     shell.openExternal(this.href);
 });
 
+// Wrapper Nav
+$(document).ready(function() {
+    $(".wrapper-nav ul li").on('click', function() {
+        $('.wrapper-nav ul li.wrapper-nav-active').removeClass('wrapper-nav-active');
+        $(this).addClass('wrapper-nav-active');
+    });
+});
+
 // Functions
 function whichTransitionEvent() {
     var t,

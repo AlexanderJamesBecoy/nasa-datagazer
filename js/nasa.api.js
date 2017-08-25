@@ -16,6 +16,11 @@ function init() {
                 $('#image').css('display', 'none');
                 document.getElementById('video').src = response["url"];
             }
+            if("copyright" in response) {
+                document.getElementById('author').textContent = 'by ' + response["copyright"];
+            } else {
+                document.getElementById('author').textContent = "Public Domain";
+            }
             document.getElementById('title').textContent = response["title"];
             document.getElementById('explanation').textContent = response["explanation"];
             document.getElementById('date').textContent = response["date"];

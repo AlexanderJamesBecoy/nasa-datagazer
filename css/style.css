@@ -26,9 +26,25 @@ body {
 .wrapper-nav ul li {
     display: inline-block;
     list-style: none;
-    width: 7vw;
+    width: 7vw auto;
     border-left: 1px solid #DDD;
     padding-left: 1vw;
+}
+
+.wrapper-nav ul .wrapper-nav-header {
+    width: 10vw;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.wrapper-nav ul .wrapper-nav-active a {
+    font-size: 1.5rem;
+    padding-top: 0;
+    color: #000;
 }
 
 .wrapper-nav ul li a {
